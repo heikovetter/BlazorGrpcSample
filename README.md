@@ -10,4 +10,4 @@ In this course we build a Blazor Webapplication Client and connect the client vi
 - Blazor (Server Side)
 - gRPC
 - Protocol Buffers
-- ASP.NET Core Webapplication
+- ASP.NET Core Web Application
