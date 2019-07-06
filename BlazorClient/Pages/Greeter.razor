@@ -1,0 +1,23 @@
+@page "/greeter"
+@using BlazorClient.Data
+@inject GreeterService GreeterService
+
+<h1>grpc Connection</h1>
+
+<input type="text" @bind="@Name" />
+<button class="btn btn-primary" @onclick="@SendName">Send Name</button>
+
+<h3>@Greetings</h3>
+
+@code {
+
+    string Name = "Your Name";
+
+    string Greetings = null;
+
+
+    async Task SendName()
+    {
+        this.Greetings = await this.GreeterService.SayHello(this.Name);
+    }
+}
